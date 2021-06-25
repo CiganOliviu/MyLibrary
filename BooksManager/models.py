@@ -14,6 +14,10 @@ class Author(models.Model):
         return str(self.first_name + " " + self.last_name)
 
 
+class BookType(models.Model):
+    pass
+
+
 class Book(models.Model):
     title = models.CharField(max_length=150)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='author', default=1)
