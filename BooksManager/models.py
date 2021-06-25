@@ -4,10 +4,11 @@ from datetime import datetime
 
 
 class Author(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50, blank=False)
+    last_name = models.CharField(max_length=50, blank=False)
     birthday = models.DateTimeField(auto_now_add=True)
     year = models.DateField()
+    description = models.TextField(default="")
 
     def __str__(self):
         return str(self.first_name + " " + self.last_name)
