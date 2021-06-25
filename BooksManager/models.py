@@ -15,7 +15,11 @@ class Author(models.Model):
 
 
 class BookType(models.Model):
-    pass
+    subject = models.CharField(max_length=50, default="None", blank=False)
+    interesting_level = models.CharField(max_length=50, default="None", blank=False)
+
+    def __str__(self):
+        return self.subject
 
 
 class Book(models.Model):

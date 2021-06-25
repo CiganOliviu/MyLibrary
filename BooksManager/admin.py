@@ -7,7 +7,7 @@ class AuthorsAdmin(admin.ModelAdmin):
 
 
 class BookTypeAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('subject', 'interesting_level')
 
 
 class BookAdmin(admin.ModelAdmin):
