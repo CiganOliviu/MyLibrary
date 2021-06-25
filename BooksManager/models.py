@@ -40,6 +40,8 @@ class DoneToReadBook(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE, default=1)
     type = models.ForeignKey(BookType, on_delete=models.CASCADE, default=0)
     mark = models.CharField(max_length=2, choices=POSSIBLE_MARKS, default=0)
+    cover = models.ImageField(upload_to='books/',
+                              default='/books/default.jpg')
 
     def __str__(self):
         return self.title
@@ -51,6 +53,8 @@ class ToReadBook(models.Model):
     type = models.ForeignKey(BookType, on_delete=models.CASCADE, default=0)
     currently_reading = models.BooleanField(default=False)
     deadline = models.DateTimeField(default=datetime.now, blank=True)
+    cover = models.ImageField(upload_to='books/',
+                              default='/books/default.jpg')
 
     def __str__(self):
         return self.title
@@ -61,6 +65,8 @@ class Wishlist(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE, default=1)
     type = models.ForeignKey(BookType, on_delete=models.CASCADE, default=0)
     wanting_level = models.CharField(max_length=2, choices=POSSIBLE_MARKS, default=0)
+    cover = models.ImageField(upload_to='books/',
+                              default='/books/default.jpg')
 
     def __str__(self):
         return self.title
@@ -71,6 +77,8 @@ class CurrentReadingBook(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE, default=1)
     type = models.ForeignKey(BookType, on_delete=models.CASCADE, default=0)
     done = models.BooleanField(default=False)
+    cover = models.ImageField(upload_to='books/',
+                              default='/books/default.jpg')
 
     def __str__(self):
         return self.title
