@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.http import Http404
 
-from rest_framework import status, permissions
+from rest_framework import status
 from rest_framework.views import APIView
-from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 
 from .serializers import *
@@ -27,28 +26,24 @@ def index(request):
 
 
 def save_books_in_model(books, model):
-
     for book in books:
 
-    	if not model.objects.filter(title=book.title, author=book.author, type=book.type).exists():
-
-	    	new_entry = model(title=book.title,
-	                          author=book.author,
-	                          type=book.type)
-	    	new_entry.save()
+        if not model.objects.filter(title=book.title, author=book.author, type=book.type).exists():
+            new_entry = model(title=book.title,
+                              author=book.author,
+                              type=book.type)
+            new_entry.save()
 
 
 class AuthorsLister(APIView):
 
     def get(self, request, format=None):
-
         authors = Author.objects.all()
         serializer = AuthorsSerializer(authors, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = AuthorsSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -93,14 +88,12 @@ class AuthorDetail(APIView):
 class BooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.all()
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -145,14 +138,12 @@ class BooksDetail(APIView):
 class HistoryBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="History")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -197,14 +188,12 @@ class HistoryBookDetails(APIView):
 class ComputerScienceBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Computer Science")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -249,14 +238,12 @@ class ComputerScienceBookDetails(APIView):
 class PsychologyBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Psychology")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -301,14 +288,12 @@ class PsychologyBookDetails(APIView):
 class SalesBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Sales")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -353,14 +338,12 @@ class SalesBookDetails(APIView):
 class MarketingBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Marketing")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -405,14 +388,12 @@ class MarketingBookDetails(APIView):
 class BiographyBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Biography")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -457,14 +438,12 @@ class BiographyBookDetails(APIView):
 class FinancesBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Finances")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -509,14 +488,12 @@ class FinancesBookDetails(APIView):
 class BusinessBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Business")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -561,14 +538,12 @@ class BusinessBookDetails(APIView):
 class NegotiationBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Negotiation")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -613,14 +588,12 @@ class NegotiationBookDetails(APIView):
 class FictionBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Fiction")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -665,14 +638,12 @@ class FictionBookDetails(APIView):
 class AutobiographyBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Autobiography")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -717,14 +688,12 @@ class AutobiographyBookDetails(APIView):
 class PeotryBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Poetry")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -769,14 +738,12 @@ class PoetryBookDetails(APIView):
 class MeditationsBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = Book.objects.filter(type="Meditations")
         serializer = BooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = BooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -818,18 +785,15 @@ class MeditationsBookDetails(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-
 class DoneToReadBooksLister(APIView):
 
     def get(self, request, format=None):
-
         read_books = DoneToReadBook.objects.all()
         serializer = DoneToReadBookSerializer(read_books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = DoneToReadBookSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -876,14 +840,12 @@ class DoneToReadBooksDetail(APIView):
 class ToReadBooksLister(APIView):
 
     def get(self, request, format=None):
-
         books = ToReadBook.objects.all()
         serializer = ToReadBooksSerializer(books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = ToReadBooksSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -933,14 +895,12 @@ class ToReadBooksDetail(APIView):
 class WishlistLister(APIView):
 
     def get(self, request, format=None):
-
         wishlist_books = Wishlist.objects.all()
         serializer = WishlistSerializer(wishlist_books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = WishlistSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -985,14 +945,12 @@ class WishlistDetail(APIView):
 class CurrentReadingBooksLister(APIView):
 
     def get(self, request, format=None):
-
         currently_reading_books = CurrentReadingBook.objects.all()
         serializer = CurrentReadingBookSerializer(currently_reading_books, many=True)
 
         return Response(serializer.data)
 
     def post(self, request, format=None):
-
         serializer = CurrentReadingBookSerializer(data=request.data)
 
         if serializer.is_valid():
