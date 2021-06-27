@@ -9,6 +9,7 @@ class Author(models.Model):
     birthday = models.DateTimeField(auto_now_add=True)
     year = models.DateField()
     description = models.TextField(default="")
+    profile_image = models.ImageField(upload_to='authors-image/', default='/authors-image/default.jpg')
 
     def __str__(self):
         return str(self.first_name + " " + self.last_name)
