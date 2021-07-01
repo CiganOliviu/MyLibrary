@@ -21,8 +21,12 @@ def index(request):
     save_books_in_model(all_not_read_books, ToReadBook)
     save_books_in_model(currently_reading_books, CurrentReadingBook)
     save_books_in_model(wishlist_books, Wishlist)
-    
-    return render(request, template_name)
+
+    context = {
+        'all_read_books': all_read_books,
+    }
+
+    return render(request, template_name, context)
 
 
 def save_books_in_model(books, model):
