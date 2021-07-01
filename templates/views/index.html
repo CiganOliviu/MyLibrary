@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>my-library</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
 </head>
 <body>
-    <div align="center">
-        <a href="{% url 'AuthorsList' %}">List of authors</a>
-        <div>&nbsp</div>
-        <a href="{% url 'BooksList' %}">List of books</a>
-        <div>&nbsp;</div>
-        <a href="{% url 'ReadBookLister' %}">List of read books</a>
-        <div>&nbsp;</div>
-        <a href="{% url 'ToReadBookLister' %}">List of "To Read" books</a>
-        <div>&nbsp;</div>
-        <a href="{% url 'WishlistLister' %}">Wishlist of books</a>
-        <div>&nbsp;</div>
-        <a href="{% url 'CurrentReadingBooksLister' %}">Currently reading books</a>
+    <div class="menu" align="center">
+        <ul>
+            <li><a href="{% url 'AuthorsList' %}">List of authors</a></li>
+            <li><a href="{% url 'BooksList' %}">List of books</a></li>
+            <li><a href="{% url 'ReadBookLister' %}">List of read books</a></li>
+            <li><a href="{% url 'ToReadBookLister' %}">List of "To Read" books</a></li>
+            <li><a href="{% url 'WishlistLister' %}">Wishlist of books</a></li>
+            <li><a href="{% url 'CurrentReadingBooksLister' %}">Currently reading books</a></li>
+        </ul>
     </div>
 </body>
 </html>
