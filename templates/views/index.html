@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>my-library</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
     {% load static %}
     <link rel="stylesheet" href="{% static 'style/style.css' %}">
 </head>
@@ -16,6 +19,19 @@
             <li><a href="{% url 'WishlistLister' %}">Wishlist of books</a></li>
             <li><a href="{% url 'CurrentReadingBooksLister' %}">Currently reading books</a></li>
         </ul>
+    </div>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
     </div>
 </body>
 </html>
