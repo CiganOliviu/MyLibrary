@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from . import views
 from rest_framework.urlpatterns import format_suffix_patterns
@@ -56,6 +58,7 @@ urlpatterns = [
     path('rest/wishlist/<int:pk>', views.WishlistDetail.as_view(), name="WishlistDetail"),
     path('rest/current-reading-books/', views.CurrentReadingBooksLister.as_view(), name='CurrentReadingBooksLister'),
     path('rest/currently-reading-books/<int:pk>', views.CurrentReadingBooksDetail.as_view(), name='CurrentReadingBooksDetail'),
+
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
