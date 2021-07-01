@@ -32,17 +32,3 @@ body {
 .menu ul li a:hover {
     color: #ff4040;
 }
-
-.gallery {
-  background: #eee;
-}
-
-.gallery-cell {
-  width: 26%;
-  height: auto;
-  counter-increment: gallery-cell;
-}
-
-.gallery-cell img {
-    width: 100%;
-}
