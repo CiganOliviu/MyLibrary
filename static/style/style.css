@@ -33,16 +33,12 @@ body {
     color: #ff4040;
 }
 
-.medium-padding {
-    padding: 20%;
-}
-
 .gallery {
-  background: #EEE;
+  background: #eee;
 }
 
 .gallery-cell {
-  width: 30%;
+  width: 26%;
   height: auto;
   counter-increment: gallery-cell;
 }

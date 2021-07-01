@@ -12,6 +12,7 @@ from .models import *
 def index(request):
     template_name = 'views/index.html'
 
+    all_books = Book.objects.all()
     all_read_books = Book.objects.filter(read=True)
     all_not_read_books = Book.objects.filter(read=False)
     currently_reading_books = ToReadBook.objects.filter(currently_reading=True)
@@ -23,7 +24,7 @@ def index(request):
     save_books_in_model(wishlist_books, Wishlist)
 
     context = {
-        'all_read_books': all_read_books,
+        'all_books': all_books,
     }
 
     return render(request, template_name, context)

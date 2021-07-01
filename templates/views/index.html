@@ -25,7 +25,7 @@
     <div>&nbsp;</div>
 
     <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-            {% for book in all_read_books %}
+            {% for book in all_books %}
                 <div class="gallery-cell"><img src="{{ book.cover.url }}" alt="{{ book.title }}"></div>
             {% endfor %}
     </div>
