@@ -12,7 +12,7 @@ from .models import *
 def index(request):
     template_name = 'views/index.html'
 
-    all_books = Book.objects.all()
+    all_books = Book.objects.all()[:4]
     all_read_books = Book.objects.filter(read=True)
     all_not_read_books = Book.objects.filter(read=False)
     currently_reading_books = ToReadBook.objects.filter(currently_reading=True)

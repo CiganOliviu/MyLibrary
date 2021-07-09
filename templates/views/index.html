@@ -47,11 +47,13 @@
     <div>&nbsp;</div>
     <div>&nbsp;</div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" align="center">
         <div class="row">
+            <h1>Books Lister</h1>
+            <div>&nbsp;</div><div>&nbsp;</div>
             {% for book in all_books %}
                 <div class="col-lg-3">
-                    <div class="books-container" align="center">
+                    <div class="books-container">
                         <img src="{{ book.cover.url }}" alt="{{ book.title }}">
                         <h3>{{ book.title }}</h3>
                         <p>{{ book.author }}</p>
