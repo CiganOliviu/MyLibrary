@@ -13,6 +13,8 @@ def index(request):
     template_name = 'views/index.html'
 
     some_books = Book.objects.all()[:4]
+    some_read_books = Book.objects.filter(read=True)[:4]
+
     all_read_books = Book.objects.filter(read=True)
     all_not_read_books = Book.objects.filter(read=False)
     currently_reading_books = ToReadBook.objects.filter(currently_reading=True)
@@ -25,6 +27,7 @@ def index(request):
 
     context = {
         'some_books': some_books,
+        'some_read_books': some_read_books,
     }
 
     return render(request, template_name, context)

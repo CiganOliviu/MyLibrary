@@ -25,3 +25,11 @@
 .books-container p {
     padding: 2%;
 }
+
+.small-padding {
+    padding: 2%;
+}
+
+.medium-padding {
+    padding: 3%;
+}
