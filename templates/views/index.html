@@ -51,7 +51,7 @@
         <div class="row">
             <h1>Books Lister</h1>
             <div>&nbsp;</div><div>&nbsp;</div>
-            {% for book in all_books %}
+            {% for book in some_books %}
                 <div class="col-lg-3">
                     <div class="books-container">
                         <img src="{{ book.cover.url }}" alt="{{ book.title }}">
@@ -62,5 +62,9 @@
             {% endfor %}
         </div>
     </div>
+
+    <div>&nbsp;</div>
+
+
 </body>
 </html>
