@@ -79,5 +79,40 @@
         </div>
     </div>
 
+    <div class="medium-padding"></div>
+
+    <div class="container-fluid" align="center">
+        <div class="row">
+            <h1>Unread books</h1>
+            <div>&nbsp;</div><div>&nbsp;</div>
+            {% for book in some_unread_books %}
+                <div class="col-lg-3">
+                    <div class="books-container">
+                        <img src="{{ book.cover.url }}" alt="{{ book.title }}">
+                        <h3>{{ book.title }}</h3>
+                        <p>{{ book.author }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="medium-padding"></div>
+
+    <div class="container-fluid" align="center">
+        <div class="row">
+            <h1>Wishlist</h1>
+            <div>&nbsp;</div><div>&nbsp;</div>
+            {% for book in some_books_wishlist %}
+                <div class="col-lg-3">
+                    <div class="books-container">
+                        <img src="{{ book.cover.url }}" alt="{{ book.title }}">
+                        <h3>{{ book.title }}</h3>
+                        <p>{{ book.author }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>

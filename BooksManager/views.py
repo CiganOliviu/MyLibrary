@@ -14,6 +14,8 @@ def index(request):
 
     some_books = Book.objects.all()[:4]
     some_read_books = Book.objects.filter(read=True)[:4]
+    some_unread_books = Book.objects.filter(read=False)[:4]
+    some_books_wishlist = Book.objects.filter(owned=False)[:4]
 
     all_read_books = Book.objects.filter(read=True)
     all_not_read_books = Book.objects.filter(read=False)
@@ -28,6 +30,8 @@ def index(request):
     context = {
         'some_books': some_books,
         'some_read_books': some_read_books,
+        'some_unread_books': some_unread_books,
+        'some_books_wishlist': some_books_wishlist,
     }
 
     return render(request, template_name, context)
