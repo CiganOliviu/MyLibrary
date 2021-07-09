@@ -1,5 +1,3 @@
-from django.conf import settings
-from django.conf.urls.static import static
 from django.urls import path
 from . import views
 from rest_framework.urlpatterns import format_suffix_patterns
@@ -13,7 +11,8 @@ urlpatterns = [
     path('rest/books/history/<int:pk>', views.HistoryBookDetails.as_view(), name='HistoryBookDetails'),
 
     path('rest/books/computer-science/', views.ComputerScienceBooksLister.as_view(), name='ComputerScienceBooksLister'),
-    path('rest/books/computer-science/<int:pk>', views.ComputerScienceBookDetails.as_view(), name='ComputerScienceBookDetails'),
+    path('rest/books/computer-science/<int:pk>', views.ComputerScienceBookDetails.as_view(),
+         name='ComputerScienceBookDetails'),
 
     path('rest/books/psychology/', views.PsychologyBooksLister.as_view(), name='PsychologyBooksLister'),
     path('rest/books/psychology/<int:pk>', views.PsychologyBookDetails.as_view(), name='PsychologyBookDetails'),
@@ -40,7 +39,8 @@ urlpatterns = [
     path('rest/books/fiction/<int:pk>', views.FictionBookDetails.as_view(), name='FictionBookDetails'),
 
     path('rest/books/autobiography/', views.AutobiographyBooksLister.as_view(), name='AutobiographyBooksLister'),
-    path('rest/books/autobiography/<int:pk>', views.AutobiographyBookDetails.as_view(), name='AutobiographyBookDetails'),
+    path('rest/books/autobiography/<int:pk>', views.AutobiographyBookDetails.as_view(),
+         name='AutobiographyBookDetails'),
 
     path('rest/books/poetry/', views.PeotryBooksLister.as_view(), name='PeotryBooksLister'),
     path('rest/books/poetry/<int:pk>', views.PoetryBookDetails.as_view(), name='PoetryBookDetails'),
@@ -57,8 +57,8 @@ urlpatterns = [
     path('rest/wishlist/', views.WishlistLister.as_view(), name="WishlistLister"),
     path('rest/wishlist/<int:pk>', views.WishlistDetail.as_view(), name="WishlistDetail"),
     path('rest/current-reading-books/', views.CurrentReadingBooksLister.as_view(), name='CurrentReadingBooksLister'),
-    path('rest/currently-reading-books/<int:pk>', views.CurrentReadingBooksDetail.as_view(), name='CurrentReadingBooksDetail'),
-
+    path('rest/currently-reading-books/<int:pk>', views.CurrentReadingBooksDetail.as_view(),
+         name='CurrentReadingBooksDetail'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
