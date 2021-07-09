@@ -21,25 +21,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a id='nav-menu-item' class="nav-link" aria-current="page" href="#">Authors</a>
+                        <a id='nav-menu-item' class="nav-link" aria-current="page" href="{% url 'AuthorsList' %}">Authors</a>
                     </li>
                     <li class="nav-item">
-                        <a id='nav-menu-item' class="nav-link" href="#">Books</a>
+                        <a id='nav-menu-item' class="nav-link" href="{% url 'BooksList' %}">Books</a>
                     </li>
                     <li class="nav-item">
-                        <a id='nav-menu-item' class="nav-link" href="#">Done To Read Book</a>
+                        <a id='nav-menu-item' class="nav-link" href="{% url 'ReadBookLister' %}">Done To Read Book</a>
                     </li>
                    <li class="nav-item">
-                        <a id='nav-menu-item' class="nav-link" href="#">To Read Book</a>
+                        <a id='nav-menu-item' class="nav-link" href="{% url 'ToReadBookLister' %}">To Read Book</a>
                     </li>
                     <li class="nav-item">
-                        <a id='nav-menu-item' class="nav-link" href="#">Wishlist</a>
+                        <a id='nav-menu-item' class="nav-link" href="{% url 'WishlistLister' %}">Wishlist</a>
                     </li>
                     <li class="nav-item">
-                        <a id='nav-menu-item' class="nav-link" href="#">Current Reading Book</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id='nav-menu-item' class="nav-link" href="#" tabindex="-1" aria-disabled="true">To Read Book</a>
+                        <a id='nav-menu-item' class="nav-link" href="{% url 'CurrentReadingBooksLister' %}">Current Reading Book</a>
                     </li>
                 </ul>
             </div>
