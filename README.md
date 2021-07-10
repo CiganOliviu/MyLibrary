@@ -5,7 +5,7 @@ more like a backend system related with a restapi (the django rest framework api
 important. From here the simplistic design: 
 
 
-![Website main page](MyLibrary-documentation/frontend-image-one.jpg)
+![Website main page](MyLibrary-documentation/frontend-image-one.JPG)
 
 Even tough the design considerations are not that important in this case, I still believe
 the app should possess a responsive design, so I implemented the app in that manner.
