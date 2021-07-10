@@ -24,6 +24,10 @@ In the backend I have 7 models, each of them being strongly related to one anoth
 * To read books -> which includes the books that you need to read
 * Wishlist -> which includes the books that you want in your library
 
+The models can be seen below
+
+![Website main page](MyLibrary-documentation/backend-models.jpg)
+
 ##### Authors
 
 ##### BookTypes
