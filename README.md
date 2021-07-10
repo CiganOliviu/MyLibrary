@@ -44,6 +44,10 @@ Like every table from this system, this one benefits is integrated along the dja
 
 ![Website main page](MyLibrary-documentation/restapi-authors.jpg)
 
+The data can be accessed in raw json format as well.
+
+![Website main page](MyLibrary-documentation/raw-restapi-authors.jpg)
+
 ##### BookTypes
 
 ##### Books
