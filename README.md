@@ -50,6 +50,10 @@ The data can be accessed in raw json format as well.
 
 ##### BookTypes
 
+This table consists in information about books types. It is directly linked by a foreign key with all the tables
+from this database in one way or another, except the Authors table. Having such a table is extremely important 
+because in this way you as a reader can categorize and filter books with much more ease, not only by the author.
+
 ##### Books
 
 ##### CurrentReadingBooks
