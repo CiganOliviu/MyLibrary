@@ -59,6 +59,9 @@ urlpatterns = [
     path('rest/current-reading-books/', views.CurrentReadingBooksLister.as_view(), name='CurrentReadingBooksLister'),
     path('rest/currently-reading-books/<int:pk>', views.CurrentReadingBooksDetail.as_view(),
          name='CurrentReadingBooksDetail'),
+    path('rest/books-types/', views.BookTypesLister.as_view(), name='BookTypesLister'),
+    path('rest/books-types/<int:pk>', views.BookTypesDetail.as_view(),
+         name='BookTypesDetail'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
