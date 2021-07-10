@@ -37,6 +37,12 @@ a basic form.
 
 ![Website main page](MyLibrary-documentation/admin-sys-authors.jpg)
 
+This table is linked to other models like Books, CurrentReadingBooks, DoneToReadBooks etc. by a foreign key.
+Each book has an author, and the author must me registered in the system. 
+
+Like every table from this system, this one benefits is integrated along the django rest api framework.
+
+
 ##### BookTypes
 
 ##### Books
