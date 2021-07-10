@@ -30,6 +30,12 @@ The models can be seen below
 
 ##### Authors
 
+The authors table represents a simple registration of all the authors from the library. In this way, 
+the reader can  be aware of the most preferred authors, or what every author has written. 
+From the administration system you can actualise, change or add new authors very easy through 
+a basic form.
+
+
 ##### BookTypes
 
 ##### Books
