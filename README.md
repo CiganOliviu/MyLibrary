@@ -11,3 +11,29 @@ Even tough the design considerations are not that important in this case, I stil
 the app should possess a responsive design, so I implemented the app in that manner.
 
 ![Website main page](MyLibrary-documentation/responsive-frontend-design.jpg)
+
+## Backend
+
+In the backend I have 7 models, each of them being strongly related to one another.
+
+* Authors -> which includes all the authors from the library
+* Book Types -> which includes all types of books that the library possess
+* Books -> which includes the actual books from the library
+* Current reading books -> which includes the books that you're currently reading
+* Done to read books -> which includes the books that you already read.
+* To read books -> which includes the books that you need to read
+* Wishlist -> which includes the books that you want in your library
+
+##### Authors
+
+##### BookTypes
+
+##### Books
+
+##### CurrentReadingBooks
+
+##### DoneToReadBooks
+
+##### ToReadBooks
+
+##### Wishlist
