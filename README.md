@@ -35,6 +35,7 @@ the reader can  be aware of the most preferred authors, or what every author has
 From the administration system you can actualise, change or add new authors very easy through 
 a basic form.
 
+![Website main page](MyLibrary-documentation/admin-sys-authors.jpg)
 
 ##### BookTypes
 
