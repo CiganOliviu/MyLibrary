@@ -54,6 +54,16 @@ This table consists in information about books types. It is directly linked by a
 from this database in one way or another, except the Authors table. Having such a table is extremely important 
 because in this way you as a reader can categorize and filter books with much more ease, not only by the author.
 
+From the administration system you can actualise, change or add new types of books very easy through 
+a basic form.
+
+![Website main page](MyLibrary-documentation/admin-sys-bookstypes.JPG)
+
+Note the interesting level field. With that one, you can adjust your interests so that you can get relevant books
+recommendations or just categorize your books by the interesting level.
+
+
+
 ##### Books
 
 ##### CurrentReadingBooks
