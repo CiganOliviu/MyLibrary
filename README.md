@@ -9,3 +9,5 @@ important. From here the simplistic design:
 
 Even tough the design considerations are not that important in this case, I still believe
 the app should possess a responsive design, so I implemented the app in that manner.
+
+![Website main page](MyLibrary-documentation/responsive-frontend-design.jpg)
