@@ -1002,3 +1002,53 @@ class CurrentReadingBooksDetail(APIView):
         currently_reading_books.delete()
 
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class BookTypesLister(APIView):
+
+    def get(self, request, format=None):
+        types = BookType.objects.all()
+        serializer = BookTypeSerializer(types, many=True)
+
+        return Response(serializer.data)
+
+    def post(self, request, format=None):
+        serializer = BookTypeSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class BookTypesDetail(APIView):
+
+    def get_post(self, pk):
+        try:
+            return BookType.objects.get(pk=pk)
+        except:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        post = self.get_post(pk)
+        serializer = BookTypeSerializer(post)
+
+        return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        types = self.get_post(pk)
+        serializer = BookTypeSerializer(types, data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format=None):
+        book_type = self.get_post(pk)
+        book_type.delete()
+
+        return Response(status=status.HTTP_204_NO_CONTENT)
