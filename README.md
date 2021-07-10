@@ -6,3 +6,6 @@ important. From here the simplistic design:
 
 
 ![Website main page](MyLibrary-documentation/frontend-image-one.jpg)
+
+Even tough the design considerations are not that important in this case, I still believe
+the app should possess a responsive design, so I implemented the app in that manner.
