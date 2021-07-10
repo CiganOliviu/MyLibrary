@@ -42,6 +42,7 @@ Each book has an author, and the author must me registered in the system.
 
 Like every table from this system, this one benefits is integrated along the django rest api framework.
 
+![Website main page](MyLibrary-documentation/restapi-authors.jpg)
 
 ##### BookTypes
 
