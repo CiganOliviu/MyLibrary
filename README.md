@@ -10,7 +10,7 @@ important. From here the simplistic design:
 Even tough the design considerations are not that important in this case, I still believe
 the app should possess a responsive design, so I implemented the app in that manner.
 
-![Website main page](MyLibrary-documentation/responsive-frontend-design.jpg)
+![Website main page](MyLibrary-documentation/responsive-frontend-design.JPG)
 
 ## Backend
 
@@ -26,7 +26,7 @@ In the backend I have 7 models, each of them being strongly related to one anoth
 
 The models can be seen below
 
-![Website main page](MyLibrary-documentation/backend-models.jpg)
+![Website main page](MyLibrary-documentation/backend-models.JPG)
 
 ##### Authors
 
@@ -35,18 +35,18 @@ the reader can  be aware of the most preferred authors, or what every author has
 From the administration system you can actualise, change or add new authors very easy through 
 a basic form.
 
-![Website main page](MyLibrary-documentation/admin-sys-authors.jpg)
+![Website main page](MyLibrary-documentation/admin-sys-authors.JPG)
 
 This table is linked to other models like Books, CurrentReadingBooks, DoneToReadBooks etc. by a foreign key.
 Each book has an author, and the author must me registered in the system. 
 
 Like every table from this system, this one benefits is integrated along the django rest api framework.
 
-![Website main page](MyLibrary-documentation/restapi-authors.jpg)
+![Website main page](MyLibrary-documentation/restapi-authors.JPG)
 
 The data can be accessed in raw json format as well.
 
-![Website main page](MyLibrary-documentation/raw-restapi-authors.jpg)
+![Website main page](MyLibrary-documentation/raw-restapi-authors.JPG)
 
 ##### BookTypes
 
