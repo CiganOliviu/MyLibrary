@@ -62,6 +62,14 @@ a basic form.
 Note the interesting level field. With that one, you can adjust your interests so that you can get relevant books
 recommendations or just categorize your books by the interesting level.
 
+Like every table from this system, this one is integrated along the django rest api framework.
+
+![Website main page](MyLibrary-documentation/restapi-bookstype.JPG)
+
+The data can be accessed in raw json format as well.
+
+![Website main page](MyLibrary-documentation/raw-restapi-bookstype.JPG)
+
 ##### Books
 
 ##### CurrentReadingBooks
