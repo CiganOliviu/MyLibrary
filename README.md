@@ -62,8 +62,6 @@ a basic form.
 Note the interesting level field. With that one, you can adjust your interests so that you can get relevant books
 recommendations or just categorize your books by the interesting level.
 
-
-
 ##### Books
 
 ##### CurrentReadingBooks
