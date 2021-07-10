@@ -52,3 +52,11 @@ class CurrentReadingBookSerializer(serializers.ModelSerializer):
     class Meta:
         model = CurrentReadingBook
         fields = '__all__'
+
+
+class BookTypeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BookType
+        fields = '__all__'
+
